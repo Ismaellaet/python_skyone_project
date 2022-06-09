@@ -27,3 +27,5 @@ class Dev(Contributor):
     def __init__(self, name, phone, position, squad = None):
         super().__init__(name, phone, squad)
         self.position = position
+
+squad_name = input('\n Squad name: ')
