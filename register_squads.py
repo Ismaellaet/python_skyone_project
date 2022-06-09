@@ -33,6 +33,10 @@ techlead_name = input(' Squad techlead\'s name: ')
 techlead_phone = input(' Techlead\'s phone number: ')
 
 squad = Squad(squad_name)
+techlead = Contributor(techlead_name, techlead_phone)
 
 squads = []
 squads.append(squad)
+
+squad.include_techlead(techlead)
+
