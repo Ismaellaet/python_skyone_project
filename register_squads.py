@@ -31,3 +31,8 @@ class Dev(Contributor):
 squad_name = input('\n Squad name: ')
 techlead_name = input(' Squad techlead\'s name: ')
 techlead_phone = input(' Techlead\'s phone number: ')
+
+squad = Squad(squad_name)
+
+squads = []
+squads.append(squad)
