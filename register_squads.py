@@ -12,6 +12,9 @@ class Squad:
     def include_techlead(self, techlead):
         self.techlead = techlead
 
+    def include_dev(self, dev):
+        self.devs.append(dev)
+
 class Contributor(Person):
     def __init__(self, name, phone, squad = None):
         super().__init__(nome, phone)
