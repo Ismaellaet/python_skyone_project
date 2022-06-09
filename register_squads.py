@@ -17,7 +17,7 @@ class Squad:
 
 class Contributor(Person):
     def __init__(self, name, phone, squad = None):
-        super().__init__(nome, phone)
+        super().__init__(name, phone)
         self.squad = squad
 
     def include_squad(self, squad):
