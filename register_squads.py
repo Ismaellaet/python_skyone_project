@@ -36,7 +36,7 @@ squad = Squad(squad_name)
 techlead = Contributor(techlead_name, techlead_phone)
 
 squads = []
-squads.append(squad)
+squads.append(squad) # Add squad in squads
 
 squad.include_techlead(techlead)
 techlead.include_squad(squad)
