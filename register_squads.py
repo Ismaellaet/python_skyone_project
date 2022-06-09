@@ -43,14 +43,20 @@ while True:
 
     squads.append(squad)  # Add squad in squads
 
-    dev_name = input('\n Dev\'s name: ')
-    dev_phone = input(' Dev\'s phone number: ')
-    dev_position = input(' Dev\'s position: ')
+    while True:
+        dev_name = input('\n Dev\'s name: ')
+        dev_phone = input(' Dev\'s phone number: ')
+        dev_position = input(' Dev\'s position: ')
 
-    dev = Dev(dev_name, dev_phone, dev_position)
+        dev = Dev(dev_name, dev_phone, dev_position)
 
-    dev.include_squad(squad)
-    squad.include_dev(dev)
+        dev.include_squad(squad)
+        squad.include_dev(dev)
+
+        anotherDev = input('\nWant to add another dev [S/N]: ')
+
+        if anotherDev in 'Nn':
+            break
 
     anotherSquad = input('\nWant to add another squad [S/N]: ')
 
