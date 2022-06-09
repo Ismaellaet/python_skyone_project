@@ -52,7 +52,7 @@ while True:
     dev.include_squad(squad)
     squad.include_dev(dev)
 
-    option = input('\nWant to add another squad [S/N]: ')
+    anotherSquad = input('\nWant to add another squad [S/N]: ')
 
-    if option in 'Nn':
+    if anotherSquad in 'Nn':
         break
