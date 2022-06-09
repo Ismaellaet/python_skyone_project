@@ -29,3 +29,5 @@ class Dev(Contributor):
         self.position = position
 
 squad_name = input('\n Squad name: ')
+techlead_name = input(' Squad techlead\'s name: ')
+techlead_phone = input(' Techlead\'s phone number: ')
