@@ -50,6 +50,7 @@ while True:
     dev = Dev(dev_name, dev_phone, dev_position)
 
     dev.include_squad(squad)
+    squad.include_dev(dev)
 
     option = input('\nWant to add another squad [S/N]: ')
 
