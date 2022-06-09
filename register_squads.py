@@ -44,8 +44,8 @@ while True:
     squads.append(squad)  # Add squad in squads
 
     dev_name = input('\n Dev\'s name: ')
-    dev_phone = input(' Dev\'s phone number')
-    dev_position = input(' Dev\'s position')
+    dev_phone = input(' Dev\'s phone number: ')
+    dev_position = input(' Dev\'s position: ')
 
     dev = Dev(dev_name, dev_phone, dev_position)
 
