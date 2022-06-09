@@ -62,3 +62,8 @@ while True:
 
     if anotherSquad in 'Nn':
         break
+
+for squad in squads:
+    print(f'\n------------------------------{squad.name}------------------------------')
+    print(f'TeachLead: {squad.techlead.name}')
+    print('\n-----Squad Developers-----')
