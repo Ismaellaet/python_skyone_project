@@ -16,3 +16,8 @@ class Contributor(Person):
     def __init__(self, name, phone, squad = None):
         super().__init__(nome, phone)
         self.squad = squad
+
+class Dev(Contributor):
+    def __init__(self, name, phone, position, squad = None):
+        super().__init__(name, phone, squad)
+        self.position = position
