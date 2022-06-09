@@ -39,4 +39,4 @@ squads = []
 squads.append(squad)
 
 squad.include_techlead(techlead)
-
+techlead.include_squad(squad)
