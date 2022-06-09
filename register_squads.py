@@ -28,15 +28,22 @@ class Dev(Contributor):
         super().__init__(name, phone, squad)
         self.position = position
 
-squad_name = input('\n Squad name: ')
-techlead_name = input(' Squad techlead\'s name: ')
-techlead_phone = input(' Techlead\'s phone number: ')
+squads = [] # Squads list
 
-squad = Squad(squad_name)
-techlead = Contributor(techlead_name, techlead_phone)
+while True:
+    squad_name = input('\n Squad name: ')
+    techlead_name = input(' Squad techlead\'s name: ')
+    techlead_phone = input(' Techlead\'s phone number: ')
 
-squads = []
-squads.append(squad) # Add squad in squads
+    squad = Squad(squad_name)
+    techlead = Contributor(techlead_name, techlead_phone)
 
-squad.include_techlead(techlead)
-techlead.include_squad(squad)
+    squad.include_techlead(techlead)
+    techlead.include_squad(squad)
+
+    squads.append(squad)  # Add squad in squads
+
+    option = input('\nWant to add another squad [S/N]: ')
+
+    if option in 'Nn':
+        break
