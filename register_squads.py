@@ -4,7 +4,7 @@ class Person:
         self.phone = phone
 
     def __str__(self):
-        print(f'\n-> {self.name} - {self.phone}')
+        print(f'-> {self.name} - {self.phone}')
 
 class Squad:
     def __init__(self, name, techlead = None, devs = None):
@@ -33,14 +33,17 @@ class Dev(Contributor):
 
     def __str__(self):
         super().__str__()
-        return f'   {self.position} position in the {self.squad.name} squad'
+        return f'   Cargo de {self.position} na squad {self.squad.name}\n'
 
 squads = [] # Squads list
 
+print('\n-==-=-=-=-=-=-=-=-=-=-=Sky.One Solutions=-=-=-=-=-=-=-=-=-=-')
+print('Bem vindo ao sistema de cadastro de squads!\n')
+
 while True:
-    squad_name = input('\n Squad name: ')
-    techlead_name = input(' Squad techlead\'s name: ')
-    techlead_phone = input(' Techlead\'s phone number: ')
+    squad_name = input('\n Nome da squad: ')
+    techlead_name = input(' Nome do techlead da squad: ')
+    techlead_phone = input(' Telefone do techlead: ')
 
     squad = Squad(squad_name)
     techlead = Contributor(techlead_name, techlead_phone)
@@ -51,29 +54,35 @@ while True:
     squads.append(squad)  # Add squad in squads
 
     while True:
-        dev_name = input('\n Dev\'s name: ')
-        dev_phone = input(' Dev\'s phone number: ')
-        dev_position = input(' Dev\'s position: ')
+        dev_name = input('\n Nome do desenvolvedor: ')
+        dev_phone = input(' Telefone do desenvolvedor: ')
+        dev_position = input(' Cargo do desenvolvedor: ')
 
         dev = Dev(dev_name, dev_phone, dev_position)
 
         dev.include_squad(squad)
         squad.include_dev(dev)
 
-        anotherDev = input('\n Want to add another dev [Y/N]: ')
+        anotherDev = input(' Deseja adicionar mais um dev? [S/N]: ')
 
         if anotherDev in 'Nn':
             break
 
-    anotherSquad = input('\n Want to add another squad [Y/N]: ')
+    anotherSquad = input('\n Deseja adicionar mais uma squad? [S/N]: ')
 
     if anotherSquad in 'Nn':
         break
 
+print('\n -==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n')
+print(' Squads criadas: ')
 for squad in squads:
     print(f'\n ------------------------------{squad.name}------------------------------')
     print(f' TeachLead: {squad.techlead.name}')
-    print('\n -----Squad Developers-----')
+    print('\n -----Devs do squad-----')
 
     for dev in squad.devs:
         print(dev)
+
+    print(f' ------------------------------{squad.name}------------------------------')
+
+print('\n -==-=-=-=-=-=-=-=-=-=-=Sky.One Solutions=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
