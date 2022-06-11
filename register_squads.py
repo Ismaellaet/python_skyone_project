@@ -1,39 +1,7 @@
-class Person:
-    def __init__(self, name, phone):
-        self.name = name
-        self.phone = phone
-
-    def __str__(self):
-        print(f'-> {self.name} - {self.phone}')
-
-class Squad:
-    def __init__(self, name, techlead = None, devs = None):
-        self.name = name
-        self.techlead = techlead
-        self.devs = []
-
-    def set_techlead(self, techlead):
-        self.techlead = techlead
-
-    def add_dev(self, dev):
-        self.devs.append(dev)
-
-class Contributor(Person):
-    def __init__(self, name, phone, squad = None):
-        super().__init__(name, phone)
-        self.squad = squad
-
-    def set_squad(self, squad):
-        self.squad = squad
-
-class Dev(Contributor):
-    def __init__(self, name, phone, position, squad = None):
-        super().__init__(name, phone, squad)
-        self.position = position
-
-    def __str__(self):
-        super().__str__()
-        return f'   Cargo de {self.position} na squad {self.squad.name}\n'
+from Person import Person
+from Squad import Squad
+from Contributor import Contributor
+from Dev import Dev
 
 squads = [] # Squads list
 
